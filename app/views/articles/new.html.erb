@@ -1,0 +1,15 @@
+<br>
+<%= link_to "Wikinomous", articles_path %>
+<%= link_to "New article", new_article_path %>
+
+<h1>New article</h1>
+
+<%= form_for(Article.new) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <%= t.label :content %>
+  <%= t.text_field :content %>
+  <%= t.submit %>
+<% end %>
+<br>
+<%= link_to "Back", articles_path %>

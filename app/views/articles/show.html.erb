@@ -1,0 +1,7 @@
+<br>
+<%= link_to "Wikinomous", articles_path %>
+<%= link_to "New article", new_article_path %>
+
+<p><%= @article.title %> - <%= link_to "Editar", edit_article_path(@article) %> - <%= link_to "Borrar", article_path(@article),
+  method: :delete, data: {confirm: "¿Está seguro de eliminar el articulo?"}%></p>
+<p><%= @article.content %></p>

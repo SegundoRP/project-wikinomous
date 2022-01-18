@@ -1,0 +1,10 @@
+<br>
+<%= link_to "Wikinomous", articles_path %>
+<%= link_to "New article", new_article_path %>
+
+<% @articles.each do |article| %>
+<h2><%= link_to article.title, article_path(article) %></h2>
+<%# el article  article_path(article) es porque la ruta es dinamica, revisalo y veras que tienne /:id entonces le paso el article que es la variable
+iteradora, rails sacara de cada uno su id para que lo muestre, a diferencia de linea 3 que no paso nada porque la ruta es estatica, no cambia %>
+<p><%= article.content %></p>
+<% end %>
